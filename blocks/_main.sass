@@ -1,0 +1,107 @@
+.main
+  border-radius: 0px 0px 48px 48px
+  background-color: #DCE1F5
+  height: 810px
+  z-index: 100
+  overflow: hidden
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &-wrap
+  &-body
+    display: flex
+    align-items: center
+    position: relative
+    margin-bottom: 64px
+  &-wrapper
+    width: 100%
+    margin: 0 auto
+  &-img
+    width: 623px
+    height: 778px
+    position: absolute
+    bottom: -77px
+    right: 0
+    z-index: 2000
+  &-image
+    object-fit: cover
+  &-title
+    margin: 0
+    font-size: 64px
+    font-weight: 500
+    line-height: 120%
+    letter-spacing: 0%
+    max-width: 531px
+    color: $darkblue
+    margin-bottom: 16px
+  &-text
+    font-size: 24px
+    font-weight: 400
+    line-height: 150%
+    letter-spacing: 0%
+    color: $darkblue
+    margin-bottom: 48px
+  &-button
+    padding: 24px 48px
+    border-radius: 16px
+    font-size: 16px
+    font-weight: 500
+    line-height: 100%
+    letter-spacing: 0%
+    &--buy
+      color: $darkblue
+      background-color: $blue
+      margin-right: 16px
+    &--more
+      color: $darkblue
+      background-color: #E6EBFF
+.tickers
+  display: flex
+  // position: absolute
+  // top: 96px
+  // left: 0
+  overflow-x: hidden
+  overflow-y: hidden
+
+.ticker
+  font-size: 128px
+  font-weight: 400
+  line-height: 120%
+  letter-spacing: 0%
+  color: #CED4EC
+  white-space: nowrap
+  display: inline-block
+  text-transform: lowercase
+  -moz-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  z-index: 1000
+
+.ticker1
+  animation: marquee1 120s infinite linear
+  animation-delay: -120s
+.ticker2
+  animation: marquee2 120s infinite linear
+  animation-delay: -60s
+
+.ticker
+  &::after
+    content: ' multipool × The dex with cex appeal × '
+@keyframes marquee1
+  0%
+    transform: translateX(100%)
+
+  100%
+    transform: translateX(-100%)
+
+@keyframes marquee2
+  0%
+    transform: translateX(0%)
+
+  100%
+    transform: translateX(-200%)
+.none
+  opacity: 0
